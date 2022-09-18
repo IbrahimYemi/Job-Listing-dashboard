@@ -1,0 +1,220 @@
+:root {
+    --Background: hsl(180, 52%, 96%);
+    --Filter: hsl(180, 31%, 95%);
+    --primary: hsl(180, 21%, 41%);
+    --secondary: hsl(180, 21%, 20%);
+    --white: hsl(0, 0%, 99%);
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--Background);
+}
+
+.header {
+    background: linear-gradient(var(--secondary), rgba(48, 103, 105, 0.4)), url(images/bg-header-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10rem;
+    position: relative;
+}
+
+.bar {
+    background: var(--white);
+    color: var(--secondary);
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.bar:hover,
+.search #search_id:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.search {
+    background: var(--white);
+    border-radius: 0.3rem;
+    height: 4rem;
+    width: 60%;
+    margin: auto;
+    display: none;
+    justify-content: space-between;
+    box-shadow: rgba(78, 104, 105, 0.2) 4px 5px 7px;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
+}
+
+.search .search_bar {
+    background: none;
+    border: none;
+    width: 90%;
+    padding: 1.5rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.search #search_id {
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    color: var(--white);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    padding: auto 0.5rem;
+    width: 10%;
+    cursor: pointer;
+}
+
+.search .close_search {
+    position: absolute;
+    top: -1.4rem;
+    right: -1.4rem;
+    background: var(--Filter);
+    color: var(--secondary);
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow:rgba(1, 28, 36, 0.9) -3px -5px 7px , 2px 5px 8px rgba(48, 103, 105, 0.8);
+}
+
+.body_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+.section_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
+    border: none;
+    border-radius: 0.4rem;
+    background: var(--white);
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.section_card:hover {
+    box-shadow: rgba(78, 104, 105, 0.2) 4px 5px 7px;
+}
+
+.section_card .first_div {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.section_card .first_div .border {
+    background: var(--secondary);
+    height: 10rem;
+    width: 0.5rem;
+    margin-right: 1rem;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    visibility: hidden;
+}
+
+.section_card:hover .first_div .border {
+    visibility: visible;
+}
+
+
+.section_card .first_div img {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    margin: 0 0.5rem;
+}
+
+.section_card .first_div .card_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_card .first_div .card_details .first_section {
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section_card .first_div .card_details .first_section .head {
+    color: var(--primary);
+}
+
+.section_card .first_div .card_details .first_section .new {
+    background: var(--primary);
+    color: var(--Background);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    margin: auto 0.3rem;
+}
+
+.section_card .first_div .card_details .first_section .featured {
+    background: var(--secondary);
+    color: var(--Background);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.section_card .first_div .card_details .job_role {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin: 1rem 0;
+}
+
+.section_card .first_div .card_details .last_section {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.section_card .filter_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.section_card .filter_section .filter {
+    background: var(--primary);
+    color: var(--Filter);
+    border-radius: 0.2rem;
+    padding: 0.3rem ;
+    margin: 0.4rem;
+}
+
+
+.section_card .filter_section .filter:hover {
+    background: var(--secondary);
+    cursor: pointer;
+}

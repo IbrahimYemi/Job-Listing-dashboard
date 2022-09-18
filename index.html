@@ -7,187 +7,292 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Job Listings</title>
+  <link rel="stylesheet" href="index.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  Python
-  <!-- Tools -->
-  React
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Account
-  New!
-  Junior Frontend Developer
-  2d ago
-  Part Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  MyHome
-  Junior Frontend Developer
-  5d ago
-  Contract
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  CSS
-  JavaScript
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Loop Studios
-  Software Engineer
-  1w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Ruby
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  FaceIt
-  Junior Backend Developer
-  2w ago
-  Full Time
-  UK only
-  <!-- Role -->
-  Backend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  Ruby
-  <!-- Tools -->
-  RoR
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Shortly
-  Junior Developer
-  2w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  HTML
-  JavaScript
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Insure
-  Junior Frontend Developer
-  2w ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  Vue
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Eyecam Co.
-  Full Stack Engineer
-  3w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Python
-  <!-- Tools -->
-  Django
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  The Air Filter Company
-  Front-end Dev
-  1mo ago
-  Part Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="header">
+      <span class="bar">search</span>
+    </div>
+    <div class="search">
+      <input type="search" class="search_bar" placeholder="...search tags">
+      <button id="search_id" onclick="fetchData()">search</button>
+      <span class="close_search">X</span>
+    </div>
+    <div class="body_div">
+      <!-- <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div>
+      <div class="section_card">
+        <div class="first_div">
+          <span class="border"></span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/800px-Outdoors-man-portrait_%28cropped%29.jpg" alt="image">
+          <div class="card_details">
+            <div class="first_section">
+              <span class="head">Manage</span>
+              <span class="new">NEW</span>
+              <span class="featured">FEATURED</span>
+            </div>
+            <div class="job_role">
+              Fullstack Developer
+            </div>
+            <div class="last_section">
+              <span class="time">1d ago</span> *
+              <span class="type">Part time</span> *
+              <span class="country">USA only</span> *
+            </div>
+          </div>
+        </div>
+        <div class="filter_section">
+          <span class="filter">Fullstack</span>
+          <span class="filter">Midweight</span>
+          <span class="filter">React</span>
+          <span class="filter">Python</span>
+        </div>
+      </div> -->
+    </div>
   </div>
+  <script src="index.js" defer></script>
 </body>
 </html>
